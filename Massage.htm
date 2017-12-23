@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+
+
+  <script>
+  let i = 0;
+  let bodyParts = ['head' , 'shoulders' , 'arms' , 'back' , 'bum' , 'legs' , 'neck', 'full body'];
+
+  function addNumber(){
+if (i<7) {
+  i++;
+} else {
+  i = "7 is enough, don't be so greedy ;-p";
+}
+    document.getElementById("p0").innerHTML = i;
+}
+
+  function doSomething() {
+    let massageType = bodyParts[Math.floor(Math.random()*bodyParts.length)];
+    document.getElementById("p1").innerHTML = massageType;
+  };
+  </script>
+
+
+  How many massages am I giving you for christmas? <p id="p0"><b>0</b></p>
+  <form>
+  <input type="button" value="add?" onclick="addNumber();"></input>
+</form>
+</br>
+</br>
+Today, you will get a <span id="p1"><b> mystery</b></span>-massage!
+</br>
+</br>
+<form>
+<input type="button" value="Massage Type" onclick="doSomething();"></input>
+</form>
+
+</body>
+</html>
